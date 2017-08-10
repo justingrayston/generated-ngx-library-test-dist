@@ -1,0 +1,31 @@
+{
+  "name": "my-ngx-library",
+  "version": "0.0.1",
+  "description": "Angular library built with ❤ using ngx-library yeoman generator.",
+  "keywords": [
+    "ng",
+    "angular",
+    "library"
+  ],
+  "author": {
+    "name": "Justin Grayston",
+    "url": "http://github.com/asdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/asdf/my-ngx-library.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "http://github.com/asdf/my-ngx-library/issues"
+  },
+  "homepage": "http://github.com/asdf/my-ngx-library",
+  "main": "bundles/my-ngx-library.umd.js",
+  "module": "my-ngx-library.js",
+  "es2015": "my-ngx-library.js",
+  "typings": "my-ngx-library.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "@angular/common": "^4.0.0"
+  }
+}
