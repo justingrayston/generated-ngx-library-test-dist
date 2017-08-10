@@ -8,19 +8,19 @@ var LibComponent = (function () {
     function LibComponent() {
         this.description = 'Angular library built with ❤ using ngx-library yeoman generator.';
     }
+    LibComponent.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'my-lib-component',
+                    template: "\n    <div class=\"card\">\n      <div class=\"card-block\">\n        <h3 class=\"card-title\">Hello from <span class=\"highlight\">my-ngx-library</span> Angular Library!</h3>\n        <p class=\"card-text description\">{{description}}</p>\n        <a href=\"#\" class=\"btn btn-primary\">Component Button</a>\n      </div>\n    </div>\n  ",
+                    styles: ["\n    .title{font-size:2em}.highlight{background-color:green;opacity:.5}.description{color:grey;font-size:1em}\n  "]
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    LibComponent.ctorParameters = function () { return []; };
     return LibComponent;
 }());
-LibComponent.decorators = [
-    { type: _angular_core.Component, args: [{
-                selector: 'my-lib-component',
-                template: "\n    <div class=\"card\">\n      <div class=\"card-block\">\n        <h3 class=\"card-title\">Hello from <span class=\"highlight\">my-ngx-library</span> Angular Library!</h3>\n        <p class=\"card-text description\">{{description}}</p>\n        <a href=\"#\" class=\"btn btn-primary\">Component Button</a>\n      </div>\n    </div>\n  ",
-                styles: ["\n    .title{font-size:2em}.highlight{background-color:green;opacity:.5}.description{color:grey;font-size:1em}\n  "]
-            },] },
-];
-/**
- * @nocollapse
- */
-LibComponent.ctorParameters = function () { return []; };
 
 var LibService = (function () {
     function LibService() {
@@ -32,15 +32,15 @@ var LibService = (function () {
     LibService.prototype.sayHello = function (name) {
         return "Hello " + (name || 'Stanger') + "!";
     };
+    LibService.decorators = [
+        { type: _angular_core.Injectable },
+    ];
+    /**
+     * @nocollapse
+     */
+    LibService.ctorParameters = function () { return []; };
     return LibService;
 }());
-LibService.decorators = [
-    { type: _angular_core.Injectable },
-];
-/**
- * @nocollapse
- */
-LibService.ctorParameters = function () { return []; };
 
 var LibModule = (function () {
     function LibModule() {
@@ -54,21 +54,21 @@ var LibModule = (function () {
             providers: [LibService]
         };
     };
+    LibModule.decorators = [
+        { type: _angular_core.NgModule, args: [{
+                    imports: [
+                        _angular_common.CommonModule
+                    ],
+                    exports: [LibComponent],
+                    declarations: [LibComponent]
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    LibModule.ctorParameters = function () { return []; };
     return LibModule;
 }());
-LibModule.decorators = [
-    { type: _angular_core.NgModule, args: [{
-                imports: [
-                    _angular_common.CommonModule
-                ],
-                exports: [LibComponent],
-                declarations: [LibComponent]
-            },] },
-];
-/**
- * @nocollapse
- */
-LibModule.ctorParameters = function () { return []; };
 
 /**
  * Generated bundle index. Do not edit.
